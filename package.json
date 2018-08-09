@@ -1,0 +1,26 @@
+{
+  "name": "vue-cli-plugin-atomic-design",
+  "version": "0.1.0",
+  "description": "Vue CLI plugin for Atomic Design & Storybook",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milad-alizadeh/vue-cli-atomic-plugin-design.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "storybook",
+    "atomic design"
+  ],
+  "author": "Milad Alizadeh <contact@miladalizadeh.com> (miladalizadeh.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milad-alizadeh/vue-cli-atomic-plugin-design/issues"
+  },
+  "homepage": "https://github.com/milad-alizadeh/vue-cli-atomic-plugin-design#readme",
+  "dependencies": {
+    "@storybook/addons": "^4.0.0-alpha.16",
+    "@storybook/vue": "^4.0.0-alpha.16"
+  }
+}
