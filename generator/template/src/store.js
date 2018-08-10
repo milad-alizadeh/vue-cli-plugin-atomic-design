@@ -7,7 +7,7 @@ Vue.use(Vuex)
 const modules = {}
 
 // Dynamically import and namespace Vuex modules
-const req = require.context('.', true, /\.\/.+\/index\.js$/)
+const req = require.context('./storeModules', true, /\.\/.+\/index\.js$/)
 
 req.keys().forEach(key => {
   let module = req(key)
