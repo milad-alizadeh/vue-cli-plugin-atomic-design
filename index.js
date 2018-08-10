@@ -2,14 +2,6 @@ const server = require('@storybook/core/server')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const path = require('path')
 
-const wrapDefaultConfig = config => ({
-  ...config,
-  module: {
-    ...config.module,
-    rules: config.module.rules.slice(0, -4),
-  },
-})
-
 // eslint-disable-next-line no-unused-vars
 module.exports = (api, projectOptions) => {
   api.configureWebpack(webpackConfig => {
@@ -18,13 +10,26 @@ module.exports = (api, projectOptions) => {
         alias: {
           components: path.resolve(__dirname, '../../src/components/'),
           containers: path.resolve(__dirname, '../../src/containers/'),
-          scss: path.resolve(__dirname, '../../src/scss/')
+          scss: path.resolve(__dirname, '../../src/scss/'),
+          vue$: require.resolve('vue/dist/vue.esm.js')
         }
       }
     }
   })
 
+  /**
+   * This section is owed to pksunkara
+   * https://github.com/pksunkara/vue-cli-plugin-storybook
+   */
   const resolvedConfig = api.resolveWebpackConfig()
+
+  const wrapDefaultConfig = config => ({
+    ...config,
+    module: {
+      ...config.module,
+      rules: config.module.rules.slice(0, -4),
+    },
+  })
 
   const wrapInitialConfig = config => ({
     ...config,
@@ -33,13 +38,7 @@ module.exports = (api, projectOptions) => {
       ...config.module,
       ...resolvedConfig.module,
     },
-    resolve: {
-      ...resolvedConfig.resolve,
-      alias: {
-        ...resolvedConfig.resolve.alias,
-        vue$: require.resolve('vue/dist/vue.esm.js')
-      },
-    },
+    resolve: resolvedConfig.resolve,
     resolveLoader: resolvedConfig.resolveLoader,
   })
 
@@ -68,7 +67,6 @@ module.exports = (api, projectOptions) => {
       wrapDefaultConfig,
     })
   })
-
   api.registerCommand('build:storybook', {
     description: 'Build storybook',
     usage: 'vue-cli-service build:storybook',
