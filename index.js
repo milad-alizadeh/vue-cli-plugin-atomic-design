@@ -9,8 +9,8 @@ module.exports = (api, projectOptions) => {
       resolve: {
         alias: {
           components: path.resolve(__dirname, '../../src/components/'),
-          containers: path.resolve(__dirname, '../../src/containers/'),
-          scss: path.resolve(__dirname, '../../src/scss/'),
+          pages: path.resolve(__dirname, '../../src/pages/'),
+          store: path.resolve(__dirname, '../../src/storeModules/'),
           vue$: require.resolve('vue/dist/vue.esm.js')
         }
       }
