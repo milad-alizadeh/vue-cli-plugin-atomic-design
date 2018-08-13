@@ -14,9 +14,20 @@ module.exports = (api, options, rootOptions) => {
       '@storybook/addon-viewport': '^4.0.0-alpha.16',
       'storybook-addon-vue-info': '0.6.0'
     },
+    eslintConfig: {
+      env: {
+        jest: true
+      },
+      rules: {
+        'import/no-extraneous-dependencies': process.env.JEST_WORKER_ID ? 'off' : 'error'
+      }
+    },
     jest: {
-      'testMatch': [
+      testMatch: [
         '**/src/**/*.test.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
+      ],
+      moduleNameMapper: [
+        '^(components|pages)$': '<rootDir>/private/jest/componentsMock.js'
       ]
     }
   })
