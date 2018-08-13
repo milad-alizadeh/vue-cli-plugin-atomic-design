@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/milad-alizadeh/vue-cli-atomic-plugin-design.git"
+    "url": "git+https://github.com/milad-alizadeh/vue-cli-plugin-atomic-design.git"
   },
   "keywords": [
     "vue",
@@ -16,9 +16,9 @@
   "author": "Milad Alizadeh <contact@miladalizadeh.com> (miladalizadeh.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/milad-alizadeh/vue-cli-atomic-plugin-design/issues"
+    "url": "https://github.com/milad-alizadeh/vue-cli-plugin-atomic-design/issues"
   },
-  "homepage": "https://github.com/milad-alizadeh/vue-cli-atomic-plugin-design#readme",
+  "homepage": "https://github.com/milad-alizadeh/vue-cli-plugin-atomic-design#readme",
   "dependencies": {
     "@storybook/addons": "^4.0.0-alpha.16",
     "@storybook/vue": "^4.0.0-alpha.16"
