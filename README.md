@@ -12,6 +12,7 @@ or generate a static style guide:
 
 ```yarn run build:storybook```
 
+
 ## Structure
 Atomic design has a very clean approach in grouping components through composition which is a a great combination with Vue.js
 
@@ -191,6 +192,19 @@ In order to make organisation simpler, each component has a folder with its name
 
 With following this structure all of the stories will be created on runtime.
 
+#### Storybook
+Can you categories storybook stories by naming the story module to '{Category} - {Component Name}'. For example:
+
+```
+storiesOf('Atom - Button', module)
+  .add('default', () => ({
+    components: { Button },
+    template: `
+      <Button />
+    `
+  }));
+
+```
 
 #### Vuex
 
