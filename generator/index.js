@@ -26,9 +26,9 @@ module.exports = (api, options, rootOptions) => {
       testMatch: [
         '**/src/**/*.test.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
       ],
-      moduleNameMapper: [
+      moduleNameMapper: {
         '^(components|pages)$': '<rootDir>/private/jest/componentsMock.js'
-      ]
+      }
     }
   })
 
