@@ -271,3 +271,7 @@ you can then reference this module in your app like:
 ```
 
 You only need to create the folders under `storeModule` folder and the folder name will be used as namespaced. You do not need to import these modules into your store manually as it's done automatically with Webpack.
+
+
+## LICENSE
+[MIT](https://raw.githubusercontent.com/milad-alizadeh/vue-cli-plugin-atomic-design/master/LICENSE)
