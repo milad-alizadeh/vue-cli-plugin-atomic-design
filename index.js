@@ -8,9 +8,12 @@ module.exports = (api, projectOptions) => {
     return {
       resolve: {
         alias: {
-          components: path.resolve(__dirname, '../../src/components/'),
-          pages: path.resolve(__dirname, '../../src/pages/'),
-          store: path.resolve(__dirname, '../../src/storeModules/'),
+          atoms: path.resolve(__dirname, '../../src/components/atoms/'),
+          molecules: path.resolve(__dirname, '../../src/components/molecules/'),
+          organisms: path.resolve(__dirname, '../../src/components/organisms/'),
+          templates: path.resolve(__dirname, '../../src/components/templates/'),
+          pages: path.resolve(__dirname, '../../src/components/pages/'),
+          store: path.resolve(__dirname, '../../src/store/'),
           vue$: require.resolve('vue/dist/vue.esm.js')
         }
       }
