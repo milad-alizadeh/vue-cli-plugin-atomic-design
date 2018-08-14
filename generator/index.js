@@ -26,12 +26,11 @@ module.exports = (api, options, rootOptions) => {
     jest: {
       testMatch: [
         '**/src/**/*.test.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
-      ],
-      moduleNameMapper: {
-        '^(components|pages)$': '<rootDir>/private/jest/componentsMock.js'
-      }
+      ]
     }
   })
+
+  api.injectImports('src/main.js', `import 'components'`);
 
   api.render('./template')
 }
