@@ -21,6 +21,24 @@ module.exports = (api, projectOptions) => {
     }
   })
 
+  // Change SVG loader from file to inline SVG
+  api.chainWebpack(webpackConfig => {
+    webpackConfig.module
+      .rule('svg')
+      .use('file-loader')
+      .loader('vue-svg-loader')
+      .tap(options => ({
+        name: options.name,
+        svgo: {
+          plugins: [
+            { removeViewBox: false },
+            { removeDimensions: true }
+          ]
+        }
+      })
+      )
+  })
+
   /**
    * This section is owed to pksunkara
    * https://github.com/pksunkara/vue-cli-plugin-storybook

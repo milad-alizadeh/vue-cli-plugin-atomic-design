@@ -21,6 +21,7 @@
   "homepage": "https://github.com/milad-alizadeh/vue-cli-plugin-atomic-design#readme",
   "dependencies": {
     "@storybook/addons": "^4.0.0-alpha.16",
-    "@storybook/vue": "^4.0.0-alpha.16"
+    "@storybook/vue": "^4.0.0-alpha.16",
+    "vue-svg-loader": "^0.5.0"
   }
 }
