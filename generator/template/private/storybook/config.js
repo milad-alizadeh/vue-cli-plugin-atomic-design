@@ -1,5 +1,6 @@
-import { configure } from '@storybook/vue'
+import { configure, addDecorator } from '@storybook/vue'
 import { setOptions } from '@storybook/addon-options'
+import StoryRouter from 'storybook-vue-router'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import './style.scss'
@@ -23,5 +24,7 @@ function loadStories () {
     return component
   })
 }
+
+addDecorator(StoryRouter())
 
 configure(loadStories, module)
