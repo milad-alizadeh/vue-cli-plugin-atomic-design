@@ -24,6 +24,9 @@ module.exports = (api, options, rootOptions) => {
       }
     },
     jest: {
+      transform: {
+        '^.+\\.svg$': 'jest-transform-stub'
+      },
       testMatch: [
         '**/src/**/*.test.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
       ]
