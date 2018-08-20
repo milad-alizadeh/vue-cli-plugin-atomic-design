@@ -33,7 +33,7 @@ module.exports = (api, options, rootOptions) => {
     }
   })
 
-  api.injectImports('src/main.js', `import 'components'`);
+  api.injectImports('src/main.js', `import './registerGlobalComponents'`);
 
   api.render('./template')
 }

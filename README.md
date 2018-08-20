@@ -165,7 +165,7 @@ export default {
 }
 ```
 
-**Note:** In some cases you might want to disable autoloading all components for performance purposes. For example you might want to lazyload some of your components. In this case you can disable autoloading by removing the line `import 'components'` from `src/main.js` file
+**Note:** In some cases you might want to disable autoloading all components for performance purposes. For example you might want to lazyload some of your components. In this case you can disable autoloading by removing the line `import 'registerGlobalComponents'` from `src/main.js` file
 
 ### Folder Structure
 

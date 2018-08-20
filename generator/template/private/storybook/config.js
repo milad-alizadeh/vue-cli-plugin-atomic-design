@@ -14,7 +14,7 @@ setOptions({
 })
 
 // Require all the .stories.js files from all components
-const req = require.context('components', true, /.stories.js$/)
+const req = require.context('@/components', true, /.stories.js$/)
 
 function loadStories () {
   req.keys().forEach((filePath) => {
