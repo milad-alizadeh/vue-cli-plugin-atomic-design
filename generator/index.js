@@ -12,7 +12,7 @@ module.exports = (api, options, rootOptions) => {
       '@storybook/addon-links': '^4.0.0-alpha.16',
       '@storybook/addon-options': '^4.0.0-alpha.16',
       '@storybook/addon-viewport': '^4.0.0-alpha.16',
-      'storybook-addon-vue-info': '0.6.0',
+      'storybook-addon-vue-info': '0.6.1',
       'storybook-vue-router': '1.0.1'
     },
     eslintConfig: {
