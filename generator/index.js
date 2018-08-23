@@ -9,11 +9,10 @@ module.exports = (api, options, rootOptions) => {
     devDependencies: {
       '@storybook/vue': '^4.0.0-alpha.16',
       '@storybook/addon-actions': '^4.0.0-alpha.16',
-      '@storybook/addon-links': '^4.0.0-alpha.16',
       '@storybook/addon-options': '^4.0.0-alpha.16',
-      '@storybook/addon-viewport': '^4.0.0-alpha.16',
       'storybook-addon-vue-info': '0.6.1',
-      'storybook-vue-router': '1.0.1'
+      'storybook-vue-router': '1.0.1',
+      'babel-polyfill': '^6.26.0'
     },
     eslintConfig: {
       env: {
@@ -25,7 +24,7 @@ module.exports = (api, options, rootOptions) => {
     },
     jest: {
       transform: {
-        '^.+\\.svg$': 'jest-transform-stub'
+        '^.+\\.svg$': '<rootDir>/private/jest/svgMock.js'
       },
       testMatch: [
         '**/src/**/*.test.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
