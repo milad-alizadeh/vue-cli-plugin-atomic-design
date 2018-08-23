@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import { configure, addDecorator } from '@storybook/vue'
 import { setOptions } from '@storybook/addon-options'
 import StoryRouter from 'storybook-vue-router'
