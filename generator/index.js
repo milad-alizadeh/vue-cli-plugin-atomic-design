@@ -3,15 +3,15 @@
 module.exports = (api, options, rootOptions) => {
   api.extendPackage({
     scripts: {
-      'serve:storybook': 'vue-cli-service serve:storybook -p 8001 -c private/storybook',
+      'serve:storybook': 'vue-cli-service serve:storybook -p 9001 -c private/storybook',
       'build:storybook': 'vue-cli-service build:storybook -c private/storybook',
     },
     devDependencies: {
-      '@storybook/vue': '^4.0.0-alpha.16',
-      '@storybook/addon-actions': '^4.0.0-alpha.16',
-      '@storybook/addon-options': '^4.0.0-alpha.16',
-      'storybook-addon-vue-info': '0.6.1',
-      'storybook-vue-router': '1.0.1',
+      '@storybook/vue': '^4.0.0-alpha.23',
+      '@storybook/addon-actions': '^4.0.0-alpha.23',
+      '@storybook/addon-options': '^4.0.0-alpha.23',
+      'storybook-addon-vue-info': '^0.6.1',
+      'storybook-vue-router': '^1.0.1',
       'babel-polyfill': '^6.26.0'
     },
     eslintConfig: {
@@ -26,13 +26,18 @@ module.exports = (api, options, rootOptions) => {
       transform: {
         '^.+\\.svg$': '<rootDir>/private/jest/svgMock.js'
       },
+      moduleNameMapper: {
+        '^atoms(.*)$': '<rootDir>/src/components/atoms$1',
+        '^molecules(.*)$': '<rootDir>/src/components/molecules$1',
+        '^organism(.*)$': '<rootDir>/src/components/organism$1',
+        '^templates(.*)$': '<rootDir>/src/components/templates$1',
+        '^pages(.*)$': '<rootDir>/src/components/pages$1'
+      },
       testMatch: [
         '**/src/**/*.test.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
       ]
     }
   })
-
-  api.injectImports('src/main.js', `import './registerGlobalComponents'`);
 
   api.render('./template')
 }
