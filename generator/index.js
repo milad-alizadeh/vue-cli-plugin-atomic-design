@@ -7,9 +7,9 @@ module.exports = (api, options, rootOptions) => {
       'build:storybook': 'vue-cli-service build:storybook -c private/storybook',
     },
     devDependencies: {
-      '@storybook/vue': '^4.0.0-alpha.23',
-      '@storybook/addon-actions': '^4.0.0-alpha.23',
-      '@storybook/addon-options': '^4.0.0-alpha.23',
+      '@storybook/vue': '^4.0.0-alpha.16',
+      '@storybook/addon-actions': '^4.0.0-alpha.16',
+      '@storybook/addon-options': '^4.0.0-alpha.16',
       'storybook-addon-vue-info': '^0.6.1',
       'storybook-vue-router': '^1.0.1',
       'babel-polyfill': '^6.26.0'
