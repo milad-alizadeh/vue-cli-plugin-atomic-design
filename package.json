@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-atomic-design",
-  "version": "0.2.5",
+  "version": "0.2.3",
   "description": "Vue CLI plugin for Atomic Design which uses Storybook and a Modular Vuex approach",
   "main": "index.js",
   "repository": {
@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/milad-alizadeh/vue-cli-plugin-atomic-design#readme",
   "dependencies": {
-    "@storybook/addons": "4.0.0-alpha.16",
-    "@storybook/vue": "4.0.0-alpha.16",
+    "@storybook/addons": "^4.0.0-alpha.16",
+    "@storybook/vue": "^4.0.0-alpha.16",
     "vue-svg-loader": "^0.5.0"
   }
 }
