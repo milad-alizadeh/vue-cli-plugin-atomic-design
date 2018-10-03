@@ -3,7 +3,7 @@
 module.exports = (api, options, rootOptions) => {
   api.extendPackage({
     scripts: {
-      'serve:storybook': 'vue-cli-service serve:storybook -p 9001 -c private/storybook',
+      'serve:storybook': 'vue-cli-service serve:storybook -p 8001 -c private/storybook',
       'build:storybook': 'vue-cli-service build:storybook -c private/storybook',
     },
     devDependencies: {
