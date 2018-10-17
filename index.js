@@ -82,7 +82,7 @@ module.exports = (api, projectOptions) => {
     server.buildDev({
       packageJson: {
         name: '@storybook/vue',
-        version: '4.0.0-alpha.16',
+        version: '4.0.0-alpha.20',
       },
       wrapInitialConfig,
       wrapDefaultConfig,
@@ -101,7 +101,7 @@ module.exports = (api, projectOptions) => {
     server.buildStatic({
       packageJson: {
         name: '@storybook/vue',
-        version: '4.0.0-alpha.16',
+        version: '4.0.0-alpha.20',
       },
       wrapInitialConfig,
       wrapDefaultConfig,
