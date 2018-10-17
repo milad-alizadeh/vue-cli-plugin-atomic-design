@@ -12,6 +12,8 @@ module.exports = (api, options, rootOptions) => {
       '@storybook/addon-options': '^4.0.0-alpha.16',
       'storybook-addon-vue-info': '^0.6.1',
       'storybook-vue-router': '^1.0.1',
+      'jest-image-snapshot': '^2.5.0',
+      'puppeteer': '^1.9.0',
       'babel-polyfill': '^6.26.0'
     },
     eslintConfig: {
@@ -23,6 +25,9 @@ module.exports = (api, options, rootOptions) => {
       }
     },
     jest: {
+      globals: {
+        PATH: 'http://localhost:8080'
+      },
       transform: {
         '^.+\\.svg$': '<rootDir>/private/jest/svgMock.js'
       },
