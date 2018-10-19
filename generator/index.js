@@ -4,7 +4,7 @@ module.exports = (api, options, rootOptions) => {
   api.extendPackage({
     scripts: {
       'serve:storybook': 'vue-cli-service serve:storybook -p 8001 -c private/storybook',
-      'build:storybook': 'vue-cli-service build:storybook -c private/storybook',
+      'build:storybook': 'vue-cli-service build:storybook -c private/storybook &&  && node ./build-scripts/fix-static-storybook.js',
     },
     devDependencies: {
       '@storybook/vue': '4.0.0-alpha.20',
