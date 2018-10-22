@@ -3,8 +3,8 @@
 Vue Atomic Design is an opinionated plugin that follows Atomic Design methodology. Please refer to this [fantastic article written](http://bradfrost.com/blog/post/atomic-web-design/) by Brad Frost for more information.
 
 related projects:
-[vue-cli-plugin-atomic-design-component](https://github.com/milad-alizadeh/vue-cli-plugin-atomic-design-components) - A library of Vue components based on Atomic Design
-[vue-cli-plugin-scss-base](https://github.com/milad-alizadeh/vue-cli-plugin-scss-base) - A starter SCSS base for Vue projects
+* [vue-cli-plugin-atomic-design-component](https://github.com/milad-alizadeh/vue-cli-plugin-atomic-design-components) - A library of Vue components based on Atomic Design
+* [vue-cli-plugin-scss-base](https://github.com/milad-alizadeh/vue-cli-plugin-scss-base) - A starter SCSS base for Vue projects
 
 ## Storybook
 Vue Atomic Design uses [Storybook](https://storybook.js.org/) as its design system tool. Originally created for React, Storybook is tool for creating UI Components in isolation. The advantage of using Storybook is that we can create our style guide and our project at the very same time without maintaining both which is great for both small and large scale applications.
