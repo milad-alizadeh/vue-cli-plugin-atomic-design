@@ -90,7 +90,7 @@ A combination of organisms, molecules and atoms to form a complete page. Templat
 
 ### Pages
 
-Pages are essentially instances of templates with real representative content. This is generally the point where Vuex connect to the rest of the project. The benefit of this approach is the separation of data and UI and it enables you to create your UI regardless of where your data actually comes from. This also makes the testing much easier.
+Pages are essentially instances of templates with real representative content. This is generally the point where Vuex connects to our templates. The benefit of this approach is the separation of data and UI and it enables you to create your UI regardless of where your data actually comes from. This also makes the testing much easier.
 
 ```
 // pages/PostPage.vue
@@ -118,54 +118,6 @@ export default {
 </script>
 
 ```
-
-Importing each components individually into your project can be very tedious and verbose. Take the following example
-
-```
-// organsims/Header.vue
-
-<template>
-  <header class="o-header">
-  	<Logo />
-  	<Navigation />
-  	<SearchForm />
-  </header>
-</template>
-
-<script>
-import Logo from '../atoms/Logo/index.vue'
-import SearchForm from '../molecules/SearchForm/index.vue'
-import Navigation from '../molecules/Navigation/index.vue'
-...
-export default {
-  components: {
-    Logo,
-    SearchForm,
-    Navigation
-  }
-}
-
-```
-
-By default the plugin autoloads and register each components using the Webpack method `require.context`. This way you do not need to import components inside your `.vue` files and you can use them directly.
-
-```
-// organsims/Header.vue
-
-<template>
-  <header class="o-header">
-  	<Logo />
-  	<Navigation />
-  	<SearchForm />
-  </header>
-</template>
-
-<script>
-export default {
-}
-```
-
-**Note:** In some cases you might want to disable autoloading all components for performance purposes. For example you might want to lazyload some of your components. In this case you can disable autoloading by removing the line `import 'registerGlobalComponents'` from `src/main.js` file
 
 ### Folder Structure
 
