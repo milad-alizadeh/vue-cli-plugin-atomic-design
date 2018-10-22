@@ -6,6 +6,23 @@ related projects:
 * [vue-cli-plugin-atomic-design-component](https://github.com/milad-alizadeh/vue-cli-plugin-atomic-design-components) - A library of Vue components based on Atomic Design
 * [vue-cli-plugin-scss-base](https://github.com/milad-alizadeh/vue-cli-plugin-scss-base) - A starter SCSS base for Vue projects
 
+## How to install
+
+You first need to install Vue Cli 3
+
+```
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+```
+
+Then you can add the plugin by typing the following command
+
+```
+vue add atomic-design
+
+```
+
 ## Storybook
 Vue Atomic Design uses [Storybook](https://storybook.js.org/) as its design system tool. Originally created for React, Storybook is tool for creating UI Components in isolation. The advantage of using Storybook is that we can create our style guide and our project at the very same time without maintaining both which is great for both small and large scale applications.
 Once you install the plugin the storybook will be configured and you can use it by running:
