@@ -24,7 +24,6 @@ Then you can add the plugin by typing the following command
 
 ```
 vue add atomic-design
-
 ```
 
 ## Storybook
