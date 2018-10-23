@@ -1,10 +1,12 @@
-# vue-cli-plugin-atomic-design
+# Vue Atomic Design
 
-Vue Atomic Design is an opinionated plugin that follows Atomic Design methodology. Please refer to this [fantastic article written](http://bradfrost.com/blog/post/atomic-web-design/) by Brad Frost for more information.
+![Vue Atomic Design](https://raw.githubusercontent.com/milad-alizadeh/vue-cli-plugin-atomic-design/master/vue-atomic-design.png)
 
-related projects:
-* [vue-cli-plugin-atomic-design-component](https://github.com/milad-alizadeh/vue-cli-plugin-atomic-design-components) - A library of Vue components based on Atomic Design
-* [vue-cli-plugin-scss-base](https://github.com/milad-alizadeh/vue-cli-plugin-scss-base) - A starter SCSS base for Vue projects
+Vue Atomic Design is an opinionated Vue CLI 3 plugin for using [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) methodology with Vue.js. 
+
+Related projects:
+* [Vue Atomic Design Components](https://github.com/milad-alizadeh/vue-cli-plugin-atomic-design-components) - A library of Vue components based on Atomic Design
+* [Vue SCSS Base](https://github.com/milad-alizadeh/vue-cli-plugin-scss-base) - A starter SCSS base for Vue projects
 
 ## How to install
 
