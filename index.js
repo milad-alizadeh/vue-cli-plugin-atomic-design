@@ -78,7 +78,7 @@ module.exports = (api, { pluginOptions = {} }) => {
     server.buildDev({
       packageJson: {
         name: '@storybook/vue',
-        version: '5.0.10',
+        version: '^5.0.10',
       },
       wrapInitialConfig: wrapInitialConfig(api, options),
       wrapDefaultConfig,
@@ -98,7 +98,7 @@ module.exports = (api, { pluginOptions = {} }) => {
     server.buildStatic({
       packageJson: {
         name: '@storybook/vue',
-        version: '5.0.10',
+        version: '^5.0.10',
       },
       wrapInitialConfig: wrapInitialConfig(api, options),
       wrapDefaultConfig

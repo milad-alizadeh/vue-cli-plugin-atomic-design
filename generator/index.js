@@ -7,13 +7,13 @@ module.exports = (api, options, rootOptions) => {
       'build:storybook': 'vue-cli-service build:storybook -c private/storybook && node ./build-scripts/fix-static-storybook.js',
     },
     devDependencies: {
-      '@storybook/vue': '4.0.0-alpha.20',
-      '@storybook/addon-actions': '4.0.0-alpha.20',
-      '@storybook/addon-options': '4.0.0-alpha.20',
-      'storybook-addon-vue-info': '^0.6.1',
-      'storybook-vue-router': '^1.0.1',
-      'jest-image-snapshot': '^2.5.0',
-      'puppeteer': '^1.9.0',
+      '@storybook/vue': '^5.0.10',
+      '@storybook/addon-actions': '^5.0.10',
+      '@storybook/addon-options': '^5.0.10',
+      '@storybook/addon-info': '^5.0.10',
+      'storybook-vue-router': '^1.0.3',
+      'jest-image-snapshot': '^2.8.1',
+      'puppeteer': '^1.14.0',
       'babel-polyfill': '^6.26.0'
     },
     eslintConfig: {
