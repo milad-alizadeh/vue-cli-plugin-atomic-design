@@ -7,16 +7,17 @@ Vue.use(Vuex)
 const modules = {}
 
 // Dynamically import and namespace Vuex modules
-const req = require.context('./storeModules', true, /\.\/.+\/index\.js$/)
+const moduleNames = []
 
-req.keys().forEach(key => {
-  let module = req(key)
-  const moduleName = key.replace(/^.+\/([^/]+)\/index\.js/, '$1')
+moduleNames.forEach(name => {
+  let module = require(`./storeModules/${name}`)
 
-  modules[moduleName] = {
+  modules[name] = {
     namespaced: true,
     ...module.default
   }
 })
 
-export default new Vuex.Store({ modules })
+const store = new Vuex.Store({ modules })
+
+export default store
