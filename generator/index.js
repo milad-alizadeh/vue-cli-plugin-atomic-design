@@ -4,7 +4,8 @@ module.exports = (api, options, rootOptions) => {
   api.extendPackage({
     devDependencies: {
       'storybook-addon-vue-info': '1.1.1',
-      'storybook-vue-router': '1.0.3'
+      'storybook-vue-router': '1.0.3',
+      '@storybook/addon-storysource': '5.0.11'
     },
     eslintConfig: {
       env: {
@@ -12,6 +13,16 @@ module.exports = (api, options, rootOptions) => {
       },
       rules: {
         'import/no-extraneous-dependencies': process.env.JEST_WORKER_ID ? 'off' : 'error'
+      }
+    },
+    vue: {
+      chainWebpack: (config) => {
+        config.module
+          .rule('storysource')
+          .test(/\.stories\.js?$/)
+          .pre()
+          .use('storysource')
+          .loader(require.resolve('@storybook/addon-storysource/loader'))
       }
     },
     jest: {
