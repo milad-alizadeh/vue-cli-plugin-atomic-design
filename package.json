@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-atomic-design",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Vue CLI plugin for Atomic Design which uses Storybook and a Modular Vuex approach",
   "main": "index.js",
   "repository": {
