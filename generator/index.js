@@ -20,10 +20,10 @@ module.exports = (api, options, rootOptions) => {
         config.module
           .rule('storysource')
           .test(/\.stories\.js?$/)
-          .pre()
+          .post()
           .use('storysource')
           .loader(require.resolve('@storybook/addon-storysource/loader'))
-      }
+      },
     },
     jest: {
       globals: {
