@@ -6,33 +6,24 @@ module.exports = (api, { pluginOptions = {} }) => {
   api.chainWebpack(webpackConfig => {
     // Create Aliases
     let aliases = {
-     atoms: path.resolve(__dirname, '../../src/components/atoms/'),
-     molecules: path.resolve(__dirname, '../../src/components/molecules/'),
-     organisms: path.resolve(__dirname, '../../src/components/organisms/'),
-     templates: path.resolve(__dirname, '../../src/components/templates/'),
-     pages: path.resolve(__dirname, '../../src/components/pages/'),
-     store: path.resolve(__dirname, '../../src/store/'),
-     vue$: require.resolve('vue/dist/vue.esm.js')
-   }
+      atoms: path.resolve(__dirname, '../../src/components/atoms/'),
+      molecules: path.resolve(__dirname, '../../src/components/molecules/'),
+      organisms: path.resolve(__dirname, '../../src/components/organisms/'),
+      templates: path.resolve(__dirname, '../../src/components/templates/'),
+      pages: path.resolve(__dirname, '../../src/components/pages/'),
+      store: path.resolve(__dirname, '../../src/store/'),
+      vue$: require.resolve('vue/dist/vue.esm.js')
+    }
 
-   for(let key in aliases) {
-     webpackConfig.resolve.alias.set(key, aliases[key])
-   }
+    for(let key in aliases) {
+      webpackConfig.resolve.alias.set(key, aliases[key])
+    }
 
-   // Change SVG loader from file to inline SVG
-   webpackConfig.module
-     .rule('svg')
-     .use('file-loader')
-     .loader('vue-svg-loader')
-     .tap(options => ({
-       name: options.name,
-       svgo: {
-         plugins: [
-           { removeViewBox: false },
-           { removeDimensions: true }
-         ]
-       }
-     })
-   )
+    // Change SVG loader from file to inline SVG
+    const svgRule = webpackConfig.module.rule('svg')
+    svgRule.uses.clear()
+    svgRule
+      .use('raw-loader')
+      .loader('raw-loader')
   })
 }
